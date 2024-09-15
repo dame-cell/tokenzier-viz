@@ -14,15 +14,15 @@ To illustrate this, we compared several tokenizers by analyzing their performanc
 
 `PS: The sample text is just a subset of what we evaluated them on,the true text is just too long`
 ```python 
-sample_text = 
-"""भूतविद्या क्या है? अध्यात्मवाद की बात करें तो ज्यादातर लोगयह भावना कॉल, दिवंगत रिश्तेदारों और प्रसिद्ध लोगों के साथ संचार प्रस्तुत करता है जिन्हें रहस्यमय फिल्मों में देखा गया है। इस लेख में हम यह जानने की कोशिश करेंगे कि वास्तव में आध्यात्मिकता क्या है, इसकी उत्पत्ति कहां और कब हुई, भविष्य में इसका विकास कैसे हुआ। "अध्यात्मवाद" शब्द लैटिन स्पिरिटस से बना था, जिसका अर्थ है "आत्मा, आत्मा," और इसका अर्थ है धार्मिक और दार्शनिक सिद्धांत। एक शिक्षण के रूप में आध्यात्मिकताः यह क्या है? अध्यात्मवाद की रहस्यमय शिक्षाओं का सार हो सकता हैइस धारणा के रूप में सूत्रबद्ध करें कि किसी व्यक्ति का आध्यात्मिक अंग शरीर की शारीरिक मृत्यु के बाद भी अपना अस्तित्व बनाए रखता है। इसके अलावा, यह एक नियम के रूप में, एक मध्यस्थ के माध्यम से रहने वाले के साथ संवाद करने में सक्षम है। इस सिद्धांत के अनुयायियों का दावा है कि आत्माएं प्राकृतिक घटनाओं और संपूर्ण भौतिक सार को नियंत्रित करती हैं। बुरी आत्माओं की सहायता से किए जाने वाले जादू के टोटकों को जादू टोना कहा जाता है। बाइबल और, तदनुसार, चर्च स्पष्ट रूप से आध्यात्मिकता के सभी रूपों की निंदा करता है। """
+भूतविद्या क्या है? अध्यात्मवाद की बात करें तो ज्यादातर लोगयह भावना कॉल, दिवंगत रिश्तेदारों और प्रसिद्ध लोगों के साथ संचार प्रस्तुत करता है जिन्हें रहस्यमय फिल्मों में देखा गया है। इस लेख में हम यह जानने की कोशिश करेंगे कि वास्तव में आध्यात्मिकता क्या है, इसकी उत्पत्ति कहां और कब हुई, भविष्य में इसका विकास कैसे हुआ। "अध्यात्मवाद" शब्द लैटिन स्पिरिटस से बना था, जिसका अर्थ है "आत्मा, आत्मा," और इसका अर्थ है धार्मिक और दार्शनिक सिद्धांत। एक शिक्षण के रूप में आध्यात्मिकताः यह क्या है? अध्यात्मवाद की रहस्यमय शिक्षाओं का सार हो सकता हैइस धारणा के रूप में सूत्रबद्ध करें कि किसी व्यक्ति का आध्यात्मिक अंग शरीर की शारीरिक मृत्यु के बाद भी अपना अस्तित्व बनाए रखता है। इसके अलावा, यह एक नियम के रूप में, एक मध्यस्थ के माध्यम से रहने वाले के साथ संवाद करने में सक्षम है। इस सिद्धांत के अनुयायियों का दावा है कि आत्माएं प्राकृतिक घटनाओं और संपूर्ण भौतिक सार को नियंत्रित करती हैं। बुरी आत्माओं की सहायता से किए जाने वाले जादू के टोटकों को जादू टोना कहा जाता है। बाइबल और, तदनुसार, चर्च स्पष्ट रूप से आध्यात्मिकता के सभी रूपों की निंदा करता है। 
+
 ```
 
 
 ```python
-sample_text= """
+
 There is so much to think about when packing for a trip to Indonesia. More so for an extended trip. Surfers might not carry as much stuff as a kiteboarder, but a surfer planning on a more extended surf trip is going to need to pack carefully. There is a golden rule when packing for a surf trip or any trip whatsoever – 'half the clothing and twice the money.'Outerknown boardshort made from 100% Australian Merino wool.Threads.You're going into boardshorts territory, so that cuts out a whole list of clothing you're not going to need. There is no need for jeans, no jackets, no tracksuits and no socks. It makes a big difference if you eliminate all of those except for maybe a pair of socks or two, especially for flying, and one or two long shirts or thin jackets for late evenings on the beach.For most of your trip, you'll be living in boardshorts and tee shirts, so you do need a couple of pairs of boardies and a pile of tees. A couple of wife-beaters 
-""""
+
 ```
 
 We tokenized the sample text using each of these tokenizers and measured the number of tokens generated. The results are visualized in the bar chart below, which shows the number of tokens produced by each tokenizer.
