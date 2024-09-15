@@ -28,15 +28,12 @@ There is so much to think about when packing for a trip to Indonesia. More so fo
 We tokenized the sample text using each of these tokenizers and measured the number of tokens generated. The results are visualized in the bar chart below, which shows the number of tokens produced by each tokenizer.
 
 
-<div style="display: flex; justify-content: space-between;">
-  <div style="flex: 1; text-align: left;">
-    <img src="images/plot_bar.png" alt="Tokenization Comparison" width="600"/>
-  </div>
-  <div style="flex: 1; text-align: right;">
-    <img src="images/plot_english_bar.png" alt="Tokenization Comparison" width="600"/>
-  </div>
-</div>
-
+<table>
+  <tr>
+    <td><img src="images/plot_bar.png" alt="Tokenization Comparison" width="100%"/></td>
+    <td><img src="images/plot_english_bar.png" alt="Tokenization Comparison" width="100%"/></td>
+  </tr>
+</table>
 
 The bar chart provides a clear comparison of how efficiently each tokenizer processes the text. The tokenizer with the smallest number of tokens demonstrates the most efficient tokenization for the given sample text.
 
