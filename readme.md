@@ -15,7 +15,7 @@ To illustrate this, we compared several tokenizers by analyzing their performanc
 - If you want to try out and just for fun 
 
 ```bash
-git clone  
+git clone  https://github.com/dame-cell/tokenzier-viz.git
 ```
 and then just try running the code on the notebook.ipynb :)
 
