@@ -11,6 +11,13 @@ To illustrate this, we compared several tokenizers by analyzing their performanc
 - `gemma-2-2b` from Hugging Face
 - `llama-3.1-storm` from Hugging Face
 - `openhathi` from Hugging Face
+# Getting started 
+- If you want to try out and just for fun 
+
+```bash
+git clone  
+```
+and then just try running the code on the notebook.ipynb :)
 
 # Generalized Tokenizer Evaluation 
 

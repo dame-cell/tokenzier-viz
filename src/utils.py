@@ -28,23 +28,8 @@ class Plots:
         if save and plot_name:
             pio.write_image(fig, f"{plot_name}.png")
     
-    def plot_lines(self, samples_text: List[str], save=False, plot_name=None):
-        # Initialize lists for storing results
-        results = {"time_point": [], "tokenizer": [], "token_length": []}
-
-        for i, text in enumerate(samples_text):
-            tokenization_results = self.tokenize(text)  # Assuming self.tokenize() method provides the tokenization
-            
-            # Collect tiktoken results
-            results["time_point"].append(i)
-            results["tokenizer"].append("tiktoken")
-            results["token_length"].append(len(tokenization_results["tiktoken"]))
-            
-            # Collect Hugging Face tokenizer results
-            for name, tokens in tokenization_results["huggingface"].items():
-                results["time_point"].append(i)
-                results["tokenizer"].append(name)
-                results["token_length"].append(len(tokens))
+    def plot_lines(self, results, save=False, plot_name=None):
+        
         
         df = pd.DataFrame(results)
         
