@@ -26,8 +26,36 @@ class Plots():
             if plot_name:
                 pio.write_image(fig, f"{plot_name}.png")
 
-    def plot_lines(self):
-        pass 
+    def plot_lines(self,samples_tokens:List[str], save=False,plot_name=None):
+        # Initialize lists for storing results
+        results = {"time_point": [], "tokenizer": [], "token_length": []}
 
+        for i, text in enumerate(text_samples):
+            tokenization_results = tokenizer.tokenize(self.tokens)
+            
+            # Collect tiktoken results
+            results["time_point"].append(i)
+            results["tokenizer"].append("tiktoken")
+            results["token_length"].append(len(tokenization_results["tiktoken"]))
+            
+            # Collect Hugging Face tokenizer results
+            for name, tokens in tokenization_results["huggingface"].items():
+                results["time_point"].append(i)
+                results["tokenizer"].append(name)
+                results["token_length"].append(len(tokens))
 
+        
+        df = pd.DataFrame(results)
+
+        # Assuming df is your DataFrame
+        fig = px.line(df, x="time_point", y="token_length", color="tokenizer",
+                        title="Token Length Comparison Across Different Tokenizers Over Time",
+                        labels={"time_point": "Time Point (Sample Index)", "token_length": "Number of Tokens", "tokenizer": "Tokenizer"})
+
+            # Show the plot in the notebook
+        fig.show()
+
+        if save:
+            if plot_name:  # Save the plot with adjusted size and resolution
+                pio.write_image(fig, f"{plot_name}.png", width=1200, height=800, scale=2) 
      
